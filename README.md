@@ -167,4 +167,4 @@ __pycache__/
 ---
 
 ## 🪪 License
-MIT License — feel free to use, modify, or extend this project.
+This project is licensed under the [MIT License](./LICENSE).
