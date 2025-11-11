@@ -70,7 +70,8 @@ try:
             }
 
             if dry_run:
-                logging.info(f"[DRY-RUN] Would create item:\n{json.dumps(item_json, indent=2)}")
+                logging.info(f"[DRY-RUN] Would create item:
+{json.dumps(item_json, indent=2)}")
             else:
                 cmd = ["op", "item", "create", "--vault", vault, "--format", "json"]
                 result = subprocess.run(cmd, input=json.dumps(item_json), text=True, capture_output=True)
@@ -79,3 +80,4 @@ try:
                 else:
                     logging.error(f"❌ Failed to create: {title}. Error: {result.stderr.strip()}")
 except FileNotFoundError:
+    logging.error(f"CSV file '{csv_file}' not found. Please check the filename.")
