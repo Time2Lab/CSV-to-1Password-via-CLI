@@ -1,0 +1,15 @@
+# Ignore all CSV files...
+*.csv
+# ...except the sample one we want in the repo
+!example-passwords.csv
+
+# Python cruft
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.env
+
+# macOS cruft
+.DS_Store
